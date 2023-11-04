@@ -55,7 +55,7 @@ extractor = AutoFeatureExtractor.from_pretrained(model_name)
 model = AutoModelForImageClassification.from_pretrained(model_name)
 
 # OpenAI API key (replace with your actual API key)
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 # Disease class labels
 class_labels = {
